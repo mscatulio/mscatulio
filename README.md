@@ -1,5 +1,9 @@
+listaBart = []
+listaHomer = []
+listaNulos = []
+#LISTAS
 def voto():
-  programa = int(input("Registre seu voto: [1] Bart [2] Homer: "))
+  programa = int(input("Digite seu voto: [1] Bart [2] Homer: "))
   if programa == 1:
     listaBart.append(programa)
   elif programa == 2:
@@ -15,16 +19,13 @@ def executar():
   else:
     print(f"Bart e Homer empataram com {len(listaHomer)} e {len(listaBart)} votos. Houve um total de {len(listaNulos)} votos nulo(s).")
 
-# LISTAS
-
-listaBart = []
-listaHomer = []
-listaNulos = []
+def main():
+    for i in range (5):
+        voto ()
+    executar()
 
 # EXECUÇÃO
+if __name__ == '__main__':
+   main()
 
-for i in range(5):
-  voto()
-
-executar()
 
